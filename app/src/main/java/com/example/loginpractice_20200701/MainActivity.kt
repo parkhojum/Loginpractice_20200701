@@ -10,8 +10,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        loginEam.setOnClickListener {
-            Toast.makeText(this,"")
+        logBtu.setOnClickListener {
+
+            //입력된
+            val inputId = loginEam.text.toString()
+            val inputpw = pwd.text.toString()
+
+            if (inputId == "admin@test.com" && inputpw == "pwer1234") {
+                Toast.makeText(this, "관리자입니다.", Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(this, "로그인 실패.", Toast.LENGTH_SHORT).show()
+            }
         }
 
 
